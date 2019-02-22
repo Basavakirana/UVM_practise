@@ -1,0 +1,50 @@
+xrun(64): 20.09-s009: (c) Copyright 1995-2021 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	20.09-s009: Started on Jun 24, 2023 at 19:33:29 IST
+xrun
+	-access +rwc
+	-f compile.f
+		./apb_master.sv
+		./apb_slave.sv
+		./apb.sv
+Recompiling... reason: file './apb.sv' is newer than expected.
+	expected: Sat Jun 24 19:32:44 2023
+	actual:   Sat Jun 24 19:33:23 2023
+file: ./apb.sv
+	module worklib.apb_top:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+    apb_slave SLAVE(
+                  |
+xmelab: *W,CUVWSI (./apb.sv,104|18): 1 input port was not connected:
+xmelab: (./apb_slave.sv,4): i_prdata
+
+	Top level design units:
+		apb_top
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.apb_top:sv <0x6b7656c2>
+			streams:   9, words: 12931
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		              Instances  Unique
+		Modules:              3       3
+		Registers:           14      14
+		Scalar wires:         9       -
+		Vectored wires:       6       -
+		Always blocks:        5       5
+		Initial blocks:       3       3
+		Pseudo assignments:   5       5
+	Writing initial simulation snapshot: worklib.apb_top:sv
+Loading snapshot worklib.apb_top:sv .................... Done
+SVSEED default: 1
+xmsim: *W,RNDXCELON: A newer version of the SystemVerilog constraint solver is being used which has better support for array-solving, new solve-order mechanism, and seed stability enhancements..
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /tools/cadence_march2021/XCELIUM2009/tools/xcelium/files/xmsimrc
+xcelium> run
+Simulation complete via $finish(1) at time 4520 NS + 0
+./apb.sv:87       #500 $finish;
+xcelium> exit
+TOOL:	xrun(64)	20.09-s009: Exiting on Jun 24, 2023 at 19:33:30 IST  (total: 00:00:01)

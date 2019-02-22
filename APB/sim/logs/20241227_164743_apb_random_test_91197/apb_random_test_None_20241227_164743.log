@@ -1,0 +1,1497 @@
+xrun(64): 22.09-s003: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	22.09-s003: Started on Dec 27, 2024 at 16:47:44 IST
+xrun
+	-f compile_file.f
+		../APB_RTL/APB_Master.v
+		../uvm_testbench/apb_top/apb_interface.sv
+		../uvm_testbench/apb_top/apb_test_pkg.sv
+		../uvm_testbench/apb_test/apb_top.sv
+	-uvmhome CDNS-1.1d
+	+UVM_TESTNAME=apb_random_test
+	-seed 91197
+	-debug
+	-access +rwc
+	-covdut apb_master
+	-covworkdir cov_work
+	-logfile logs/20241227_164743_apb_random_test_91197/apb_random_test_None_20241227_164743.log
+	+UVM_VERBOSITY=UVM_NONE
+	-coverage all
+	-covoverwrite
+
+   User defined plus("+") options:
+	+UVM_VERBOSITY=UVM_NONE
+
+Loading snapshot worklib.apb_top:sv .................... Done
+SVSEED set from command line: 91197
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /tools/cadence_march2021/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> source /tools/cadence_march2021/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d/additions/sv/files/tcl/uvm_sim.tcl
+xcelium> run
+----------------------------------------------------------------
+CDNS-UVM-1.1d (22.09-s003)
+(C) 2007-2013 Mentor Graphics Corporation
+(C) 2007-2013 Cadence Design Systems, Inc.
+(C) 2006-2013 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test apb_random_test...
+-----------------------------------------------------------------------------------------
+Name                           Type                  Size  Value                         
+-----------------------------------------------------------------------------------------
+read_transaction               apb_jtag_transaction  -     @4647                         
+  transfer                     integral              1     'h1                           
+  read                         integral              1     'h0                           
+  write                        integral              1     'h1                           
+  apb_paddr                    integral              32    'hf57b46f4                    
+  apb_write_data               integral              32    'h42bb81dd                    
+  prdata                       integral              32    'h0                           
+  pready                       integral              1     'h0                           
+  pslverr                      integral              1     'h0                           
+  psel                         integral              1     'h0                           
+  pwrite                       integral              1     'h0                           
+  paddr                        integral              32    'h0                           
+  pwdata                       integral              32    'h0                           
+  apb_read_data_out            integral              32    'h0                           
+  apb_read_data_valid          integral              1     'h0                           
+  begin_time                   time                  64    0                             
+  depth                        int                   32    'd2                           
+  parent sequence (name)       string                4     jseq                          
+  parent sequence (full name)  string                30    uvm_test_top.env.apj.seqr.jseq
+  sequencer                    string                25    uvm_test_top.env.apj.seqr     
+-----------------------------------------------------------------------------------------
+data written into slave at memory [f57b46f4] = 42bb81dd
+         0 -------------         0
+-------------------------------------------------------------
+Name                   Type                  Size  Value     
+-------------------------------------------------------------
+trans                  apb_jtag_transaction  -     @4632     
+  transfer             integral              1     'h1       
+  read                 integral              1     'h0       
+  write                integral              1     'h1       
+  apb_paddr            integral              32    'hf57b46f4
+  apb_write_data       integral              32    'h42bb81dd
+  prdata               integral              32    'h0       
+  pready               integral              1     'h0       
+  pslverr              integral              1     'h1       
+  psel                 integral              1     'h1       
+  pwrite               integral              1     'h0       
+  paddr                integral              32    'hf57b46f4
+  pwdata               integral              32    'h42bb81dd
+  apb_read_data_out    integral              32    'h0       
+  apb_read_data_valid  integral              1     'h0       
+-------------------------------------------------------------
+the value of slave error is 1
+-----------------------------------------------------------------------------------------
+Name                           Type                  Size  Value                         
+-----------------------------------------------------------------------------------------
+read_transaction               apb_jtag_transaction  -     @4627                         
+  transfer                     integral              1     'h1                           
+  read                         integral              1     'h0                           
+  write                        integral              1     'h1                           
+  apb_paddr                    integral              32    'h3411ff26                    
+  apb_write_data               integral              32    'hecb438b8                    
+  prdata                       integral              32    'h0                           
+  pready                       integral              1     'h0                           
+  pslverr                      integral              1     'h0                           
+  psel                         integral              1     'h0                           
+  pwrite                       integral              1     'h0                           
+  paddr                        integral              32    'h0                           
+  pwdata                       integral              32    'h0                           
+  apb_read_data_out            integral              32    'h0                           
+  apb_read_data_valid          integral              1     'h0                           
+  begin_time                   time                  64    70000                         
+  depth                        int                   32    'd2                           
+  parent sequence (name)       string                4     jseq                          
+  parent sequence (full name)  string                30    uvm_test_top.env.apj.seqr.jseq
+  sequencer                    string                25    uvm_test_top.env.apj.seqr     
+-----------------------------------------------------------------------------------------
+         0 -------------         0
+-------------------------------------------------------------
+Name                   Type                  Size  Value     
+-------------------------------------------------------------
+trans                  apb_jtag_transaction  -     @4711     
+  transfer             integral              1     'h1       
+  read                 integral              1     'h0       
+  write                integral              1     'h1       
+  apb_paddr            integral              32    'h3411ff26
+  apb_write_data       integral              32    'hecb438b8
+  prdata               integral              32    'h0       
+  pready               integral              1     'h0       
+  pslverr              integral              1     'h0       
+  psel                 integral              1     'h1       
+  pwrite               integral              1     'h0       
+  paddr                integral              32    'h3411ff26
+  pwdata               integral              32    'hecb438b8
+  apb_read_data_out    integral              32    'h0       
+  apb_read_data_valid  integral              1     'h0       
+-------------------------------------------------------------
+data written into slave at memory [3411ff26] = ecb438b8
+the value of slave error is 0
+the value of slave error is 1
+the value of slave error is 1
+-----------------------------------------------------------------------------------------
+Name                           Type                  Size  Value                         
+-----------------------------------------------------------------------------------------
+read_transaction               apb_jtag_transaction  -     @4738                         
+  transfer                     integral              1     'h1                           
+  read                         integral              1     'h1                           
+  write                        integral              1     'h0                           
+  apb_paddr                    integral              32    'h3d209735                    
+  apb_write_data               integral              32    'h3c678369                    
+  prdata                       integral              32    'h0                           
+  pready                       integral              1     'h0                           
+  pslverr                      integral              1     'h0                           
+  psel                         integral              1     'h0                           
+  pwrite                       integral              1     'h0                           
+  paddr                        integral              32    'h0                           
+  pwdata                       integral              32    'h0                           
+  apb_read_data_out            integral              32    'h0                           
+  apb_read_data_valid          integral              1     'h0                           
+  begin_time                   time                  64    190000                        
+  depth                        int                   32    'd2                           
+  parent sequence (name)       string                4     jseq                          
+  parent sequence (full name)  string                30    uvm_test_top.env.apj.seqr.jseq
+  sequencer                    string                25    uvm_test_top.env.apj.seqr     
+-----------------------------------------------------------------------------------------
+ 846323959 ------------- 846323959
+-------------------------------------------------------------
+Name                   Type                  Size  Value     
+-------------------------------------------------------------
+trans                  apb_jtag_transaction  -     @4783     
+  transfer             integral              1     'h1       
+  read                 integral              1     'h1       
+  write                integral              1     'h0       
+  apb_paddr            integral              32    'h3d209735
+  apb_write_data       integral              32    'h3c678369
+  prdata               integral              32    'h3271e0f7
+  pready               integral              1     'h0       
+  pslverr              integral              1     'h0       
+  psel                 integral              1     'h1       
+  pwrite               integral              1     'h0       
+  paddr                integral              32    'h3d209735
+  pwdata               integral              32    'h0       
+  apb_read_data_out    integral              32    'h3271e0f7
+  apb_read_data_valid  integral              1     'h0       
+-------------------------------------------------------------
+the value of slave error is 0
+-----------------------------------------------------------------------------------------
+Name                           Type                  Size  Value                         
+-----------------------------------------------------------------------------------------
+read_transaction               apb_jtag_transaction  -     @4692                         
+  transfer                     integral              1     'h1                           
+  read                         integral              1     'h1                           
+  write                        integral              1     'h0                           
+  apb_paddr                    integral              32    'h97deebf                     
+  apb_write_data               integral              32    'h7e925e83                    
+  prdata                       integral              32    'h0                           
+  pready                       integral              1     'h0                           
+  pslverr                      integral              1     'h0                           
+  psel                         integral              1     'h0                           
+  pwrite                       integral              1     'h0                           
+  paddr                        integral              32    'h0                           
+  pwdata                       integral              32    'h0                           
+  apb_read_data_out            integral              32    'h0                           
+  apb_read_data_valid          integral              1     'h0                           
+  begin_time                   time                  64    390000                        
+  depth                        int                   32    'd2                           
+  parent sequence (name)       string                4     jseq                          
+  parent sequence (full name)  string                30    uvm_test_top.env.apj.seqr.jseq
+  sequencer                    string                25    uvm_test_top.env.apj.seqr     
+-----------------------------------------------------------------------------------------
+ 371001936 ------------- 371001936
+-------------------------------------------------------------
+Name                   Type                  Size  Value     
+-------------------------------------------------------------
+trans                  apb_jtag_transaction  -     @4756     
+  transfer             integral              1     'h1       
+  read                 integral              1     'h1       
+  write                integral              1     'h0       
+  apb_paddr            integral              32    'h97deebf 
+  apb_write_data       integral              32    'h7e925e83
+  prdata               integral              32    'h161d0a50
+  pready               integral              1     'h0       
+  pslverr              integral              1     'h0       
+  psel                 integral              1     'h1       
+  pwrite               integral              1     'h0       
+  paddr                integral              32    'h97deebf 
+  pwdata               integral              32    'h0       
+  apb_read_data_out    integral              32    'h161d0a50
+  apb_read_data_valid  integral              1     'h0       
+-------------------------------------------------------------
+the value of slave error is 1
+-----------------------------------------------------------------------------------------
+Name                           Type                  Size  Value                         
+-----------------------------------------------------------------------------------------
+read_transaction               apb_jtag_transaction  -     @4618                         
+  transfer                     integral              1     'h1                           
+  read                         integral              1     'h0                           
+  write                        integral              1     'h1                           
+  apb_paddr                    integral              32    'h9fe0bc25                    
+  apb_write_data               integral              32    'h51b04b52                    
+  prdata                       integral              32    'h0                           
+  pready                       integral              1     'h0                           
+  pslverr                      integral              1     'h0                           
+  psel                         integral              1     'h0                           
+  pwrite                       integral              1     'h0                           
+  paddr                        integral              32    'h0                           
+  pwdata                       integral              32    'h0                           
+  apb_read_data_out            integral              32    'h0                           
+  apb_read_data_valid          integral              1     'h0                           
+  begin_time                   time                  64    510000                        
+  depth                        int                   32    'd2                           
+  parent sequence (name)       string                4     jseq                          
+  parent sequence (full name)  string                30    uvm_test_top.env.apj.seqr.jseq
+  sequencer                    string                25    uvm_test_top.env.apj.seqr     
+-----------------------------------------------------------------------------------------
+ 371001936 -------------         0
+-------------------------------------------------------------
+Name                   Type                  Size  Value     
+-------------------------------------------------------------
+trans                  apb_jtag_transaction  -     @4667     
+  transfer             integral              1     'h1       
+  read                 integral              1     'h0       
+  write                integral              1     'h1       
+  apb_paddr            integral              32    'h9fe0bc25
+  apb_write_data       integral              32    'h51b04b52
+  prdata               integral              32    'h0       
+  pready               integral              1     'h0       
+  pslverr              integral              1     'h0       
+  psel                 integral              1     'h1       
+  pwrite               integral              1     'h0       
+  paddr                integral              32    'h9fe0bc25
+  pwdata               integral              32    'h51b04b52
+  apb_read_data_out    integral              32    'h0       
+  apb_read_data_valid  integral              1     'h0       
+-------------------------------------------------------------
+data written into slave at memory [9fe0bc25] = 51b04b52
+the value of slave error is 0
+-----------------------------------------------------------------------------------------
+Name                           Type                  Size  Value                         
+-----------------------------------------------------------------------------------------
+read_transaction               apb_jtag_transaction  -     @4809                         
+  transfer                     integral              1     'h1                           
+  read                         integral              1     'h0                           
+  write                        integral              1     'h1                           
+  apb_paddr                    integral              32    'he7a0a9cd                    
+  apb_write_data               integral              32    'h3d7026d5                    
+  prdata                       integral              32    'h0                           
+  pready                       integral              1     'h0                           
+  pslverr                      integral              1     'h0                           
+  psel                         integral              1     'h0                           
+  pwrite                       integral              1     'h0                           
+  paddr                        integral              32    'h0                           
+  pwdata                       integral              32    'h0                           
+  apb_read_data_out            integral              32    'h0                           
+  apb_read_data_valid          integral              1     'h0                           
+  begin_time                   time                  64    550000                        
+  depth                        int                   32    'd2                           
+  parent sequence (name)       string                4     jseq                          
+  parent sequence (full name)  string                30    uvm_test_top.env.apj.seqr.jseq
+  sequencer                    string                25    uvm_test_top.env.apj.seqr     
+-----------------------------------------------------------------------------------------
+ 371001936 -------------         0
+-------------------------------------------------------------
+Name                   Type                  Size  Value     
+-------------------------------------------------------------
+trans                  apb_jtag_transaction  -     @4731     
+  transfer             integral              1     'h1       
+  read                 integral              1     'h0       
+  write                integral              1     'h1       
+  apb_paddr            integral              32    'he7a0a9cd
+  apb_write_data       integral              32    'h3d7026d5
+  prdata               integral              32    'h0       
+  pready               integral              1     'h0       
+  pslverr              integral              1     'h0       
+  psel                 integral              1     'h1       
+  pwrite               integral              1     'h0       
+  paddr                integral              32    'he7a0a9cd
+  pwdata               integral              32    'h3d7026d5
+  apb_read_data_out    integral              32    'h0       
+  apb_read_data_valid  integral              1     'h0       
+-------------------------------------------------------------
+ 371001936 -------------         0
+-------------------------------------------------------------
+Name                   Type                  Size  Value     
+-------------------------------------------------------------
+trans                  apb_jtag_transaction  -     @4789     
+  transfer             integral              1     'h1       
+  read                 integral              1     'h0       
+  write                integral              1     'h1       
+  apb_paddr            integral              32    'he7a0a9cd
+  apb_write_data       integral              32    'h3d7026d5
+  prdata               integral              32    'h0       
+  pready               integral              1     'h0       
+  pslverr              integral              1     'h0       
+  psel                 integral              1     'h1       
+  pwrite               integral              1     'h0       
+  paddr                integral              32    'he7a0a9cd
+  pwdata               integral              32    'h3d7026d5
+  apb_read_data_out    integral              32    'h0       
+  apb_read_data_valid  integral              1     'h0       
+-------------------------------------------------------------
+data written into slave at memory [e7a0a9cd] = 3d7026d5
+ 371001936 -------------         0
+-------------------------------------------------------------
+Name                   Type                  Size  Value     
+-------------------------------------------------------------
+trans                  apb_jtag_transaction  -     @4806     
+  transfer             integral              1     'h1       
+  read                 integral              1     'h0       
+  write                integral              1     'h1       
+  apb_paddr            integral              32    'he7a0a9cd
+  apb_write_data       integral              32    'h3d7026d5
+  prdata               integral              32    'h0       
+  pready               integral              1     'h0       
+  pslverr              integral              1     'h0       
+  psel                 integral              1     'h1       
+  pwrite               integral              1     'h0       
+  paddr                integral              32    'he7a0a9cd
+  pwdata               integral              32    'h3d7026d5
+  apb_read_data_out    integral              32    'h0       
+  apb_read_data_valid  integral              1     'h0       
+-------------------------------------------------------------
+the value of slave error is 0
+-----------------------------------------------------------------------------------------
+Name                           Type                  Size  Value                         
+-----------------------------------------------------------------------------------------
+read_transaction               apb_jtag_transaction  -     @4804                         
+  transfer                     integral              1     'h1                           
+  read                         integral              1     'h1                           
+  write                        integral              1     'h0                           
+  apb_paddr                    integral              32    'ha7a27302                    
+  apb_write_data               integral              32    'heb05aba0                    
+  prdata                       integral              32    'h0                           
+  pready                       integral              1     'h0                           
+  pslverr                      integral              1     'h0                           
+  psel                         integral              1     'h0                           
+  pwrite                       integral              1     'h0                           
+  paddr                        integral              32    'h0                           
+  pwdata                       integral              32    'h0                           
+  apb_read_data_out            integral              32    'h0                           
+  apb_read_data_valid          integral              1     'h0                           
+  begin_time                   time                  64    650000                        
+  depth                        int                   32    'd2                           
+  parent sequence (name)       string                4     jseq                          
+  parent sequence (full name)  string                30    uvm_test_top.env.apj.seqr.jseq
+  sequencer                    string                25    uvm_test_top.env.apj.seqr     
+-----------------------------------------------------------------------------------------
+1581350488 -------------1581350488
+-------------------------------------------------------------
+Name                   Type                  Size  Value     
+-------------------------------------------------------------
+trans                  apb_jtag_transaction  -     @4734     
+  transfer             integral              1     'h1       
+  read                 integral              1     'h1       
+  write                integral              1     'h0       
+  apb_paddr            integral              32    'ha7a27302
+  apb_write_data       integral              32    'heb05aba0
+  prdata               integral              32    'h5e417e58
+  pready               integral              1     'h0       
+  pslverr              integral              1     'h0       
+  psel                 integral              1     'h1       
+  pwrite               integral              1     'h0       
+  paddr                integral              32    'ha7a27302
+  pwdata               integral              32    'h0       
+  apb_read_data_out    integral              32    'h5e417e58
+  apb_read_data_valid  integral              1     'h0       
+-------------------------------------------------------------
+the value of slave error is 1
+the value of slave error is 1
+the value of slave error is 0
+-----------------------------------------------------------------------------------------
+Name                           Type                  Size  Value                         
+-----------------------------------------------------------------------------------------
+read_transaction               apb_jtag_transaction  -     @4799                         
+  transfer                     integral              1     'h1                           
+  read                         integral              1     'h1                           
+  write                        integral              1     'h0                           
+  apb_paddr                    integral              32    'h79160195                    
+  apb_write_data               integral              32    'h74b9c506                    
+  prdata                       integral              32    'h0                           
+  pready                       integral              1     'h0                           
+  pslverr                      integral              1     'h0                           
+  psel                         integral              1     'h0                           
+  pwrite                       integral              1     'h0                           
+  paddr                        integral              32    'h0                           
+  pwdata                       integral              32    'h0                           
+  apb_read_data_out            integral              32    'h0                           
+  apb_read_data_valid          integral              1     'h0                           
+  begin_time                   time                  64    830000                        
+  depth                        int                   32    'd2                           
+  parent sequence (name)       string                4     jseq                          
+  parent sequence (full name)  string                30    uvm_test_top.env.apj.seqr.jseq
+  sequencer                    string                25    uvm_test_top.env.apj.seqr     
+-----------------------------------------------------------------------------------------
+         0 -------------         0
+-------------------------------------------------------------
+Name                   Type                  Size  Value     
+-------------------------------------------------------------
+trans                  apb_jtag_transaction  -     @4807     
+  transfer             integral              1     'h1       
+  read                 integral              1     'h1       
+  write                integral              1     'h0       
+  apb_paddr            integral              32    'h79160195
+  apb_write_data       integral              32    'h74b9c506
+  prdata               integral              32    'h0       
+  pready               integral              1     'h0       
+  pslverr              integral              1     'h0       
+  psel                 integral              1     'h1       
+  pwrite               integral              1     'h0       
+  paddr                integral              32    'h79160195
+  pwdata               integral              32    'h0       
+  apb_read_data_out    integral              32    'h0       
+  apb_read_data_valid  integral              1     'h0       
+-------------------------------------------------------------
+the value of slave error is 1
+the value of slave error is 0
+-----------------------------------------------------------------------------------------
+Name                           Type                  Size  Value                         
+-----------------------------------------------------------------------------------------
+read_transaction               apb_jtag_transaction  -     @4655                         
+  transfer                     integral              1     'h1                           
+  read                         integral              1     'h0                           
+  write                        integral              1     'h1                           
+  apb_paddr                    integral              32    'hf4ee8d46                    
+  apb_write_data               integral              32    'hc75552f8                    
+  prdata                       integral              32    'h0                           
+  pready                       integral              1     'h0                           
+  pslverr                      integral              1     'h0                           
+  psel                         integral              1     'h0                           
+  pwrite                       integral              1     'h0                           
+  paddr                        integral              32    'h0                           
+  pwdata                       integral              32    'h0                           
+  apb_read_data_out            integral              32    'h0                           
+  apb_read_data_valid          integral              1     'h0                           
+  begin_time                   time                  64    930000                        
+  depth                        int                   32    'd2                           
+  parent sequence (name)       string                4     jseq                          
+  parent sequence (full name)  string                30    uvm_test_top.env.apj.seqr.jseq
+  sequencer                    string                25    uvm_test_top.env.apj.seqr     
+-----------------------------------------------------------------------------------------
+         0 -------------         0
+-------------------------------------------------------------
+Name                   Type                  Size  Value     
+-------------------------------------------------------------
+trans                  apb_jtag_transaction  -     @4731     
+  transfer             integral              1     'h1       
+  read                 integral              1     'h0       
+  write                integral              1     'h1       
+  apb_paddr            integral              32    'hf4ee8d46
+  apb_write_data       integral              32    'hc75552f8
+  prdata               integral              32    'h0       
+  pready               integral              1     'h0       
+  pslverr              integral              1     'h0       
+  psel                 integral              1     'h1       
+  pwrite               integral              1     'h0       
+  paddr                integral              32    'hf4ee8d46
+  pwdata               integral              32    'hc75552f8
+  apb_read_data_out    integral              32    'h0       
+  apb_read_data_valid  integral              1     'h0       
+-------------------------------------------------------------
+data written into slave at memory [f4ee8d46] = c75552f8
+the value of slave error is 1
+-----------------------------------------------------------------------------------------
+Name                           Type                  Size  Value                         
+-----------------------------------------------------------------------------------------
+read_transaction               apb_jtag_transaction  -     @4707                         
+  transfer                     integral              1     'h1                           
+  read                         integral              1     'h0                           
+  write                        integral              1     'h1                           
+  apb_paddr                    integral              32    'h2fd9c778                    
+  apb_write_data               integral              32    'h451dfa02                    
+  prdata                       integral              32    'h0                           
+  pready                       integral              1     'h0                           
+  pslverr                      integral              1     'h0                           
+  psel                         integral              1     'h0                           
+  pwrite                       integral              1     'h0                           
+  paddr                        integral              32    'h0                           
+  pwdata                       integral              32    'h0                           
+  apb_read_data_out            integral              32    'h0                           
+  apb_read_data_valid          integral              1     'h0                           
+  begin_time                   time                  64    990000                        
+  depth                        int                   32    'd2                           
+  parent sequence (name)       string                4     jseq                          
+  parent sequence (full name)  string                30    uvm_test_top.env.apj.seqr.jseq
+  sequencer                    string                25    uvm_test_top.env.apj.seqr     
+-----------------------------------------------------------------------------------------
+         0 -------------         0
+-------------------------------------------------------------
+Name                   Type                  Size  Value     
+-------------------------------------------------------------
+trans                  apb_jtag_transaction  -     @4758     
+  transfer             integral              1     'h1       
+  read                 integral              1     'h0       
+  write                integral              1     'h1       
+  apb_paddr            integral              32    'h2fd9c778
+  apb_write_data       integral              32    'h451dfa02
+  prdata               integral              32    'h0       
+  pready               integral              1     'h0       
+  pslverr              integral              1     'h0       
+  psel                 integral              1     'h1       
+  pwrite               integral              1     'h0       
+  paddr                integral              32    'h2fd9c778
+  pwdata               integral              32    'h451dfa02
+  apb_read_data_out    integral              32    'h0       
+  apb_read_data_valid  integral              1     'h0       
+-------------------------------------------------------------
+data written into slave at memory [2fd9c778] = 451dfa02
+         0 -------------         0
+-------------------------------------------------------------
+Name                   Type                  Size  Value     
+-------------------------------------------------------------
+trans                  apb_jtag_transaction  -     @4806     
+  transfer             integral              1     'h1       
+  read                 integral              1     'h0       
+  write                integral              1     'h1       
+  apb_paddr            integral              32    'h2fd9c778
+  apb_write_data       integral              32    'h451dfa02
+  prdata               integral              32    'h0       
+  pready               integral              1     'h0       
+  pslverr              integral              1     'h0       
+  psel                 integral              1     'h1       
+  pwrite               integral              1     'h0       
+  paddr                integral              32    'h2fd9c778
+  pwdata               integral              32    'h451dfa02
+  apb_read_data_out    integral              32    'h0       
+  apb_read_data_valid  integral              1     'h0       
+-------------------------------------------------------------
+the value of slave error is 1
+-----------------------------------------------------------------------------------------
+Name                           Type                  Size  Value                         
+-----------------------------------------------------------------------------------------
+read_transaction               apb_jtag_transaction  -     @4754                         
+  transfer                     integral              1     'h1                           
+  read                         integral              1     'h0                           
+  write                        integral              1     'h1                           
+  apb_paddr                    integral              32    'ha23b0588                    
+  apb_write_data               integral              32    'he2ccc53f                    
+  prdata                       integral              32    'h0                           
+  pready                       integral              1     'h0                           
+  pslverr                      integral              1     'h0                           
+  psel                         integral              1     'h0                           
+  pwrite                       integral              1     'h0                           
+  paddr                        integral              32    'h0                           
+  pwdata                       integral              32    'h0                           
+  apb_read_data_out            integral              32    'h0                           
+  apb_read_data_valid          integral              1     'h0                           
+  begin_time                   time                  64    1070000                       
+  depth                        int                   32    'd2                           
+  parent sequence (name)       string                4     jseq                          
+  parent sequence (full name)  string                30    uvm_test_top.env.apj.seqr.jseq
+  sequencer                    string                25    uvm_test_top.env.apj.seqr     
+-----------------------------------------------------------------------------------------
+         0 -------------         0
+-------------------------------------------------------------
+Name                   Type                  Size  Value     
+-------------------------------------------------------------
+trans                  apb_jtag_transaction  -     @4802     
+  transfer             integral              1     'h1       
+  read                 integral              1     'h0       
+  write                integral              1     'h1       
+  apb_paddr            integral              32    'ha23b0588
+  apb_write_data       integral              32    'he2ccc53f
+  prdata               integral              32    'h0       
+  pready               integral              1     'h0       
+  pslverr              integral              1     'h0       
+  psel                 integral              1     'h1       
+  pwrite               integral              1     'h0       
+  paddr                integral              32    'ha23b0588
+  pwdata               integral              32    'he2ccc53f
+  apb_read_data_out    integral              32    'h0       
+  apb_read_data_valid  integral              1     'h0       
+-------------------------------------------------------------
+data written into slave at memory [a23b0588] = e2ccc53f
+the value of slave error is 0
+-----------------------------------------------------------------------------------------
+Name                           Type                  Size  Value                         
+-----------------------------------------------------------------------------------------
+read_transaction               apb_jtag_transaction  -     @4727                         
+  transfer                     integral              1     'h1                           
+  read                         integral              1     'h1                           
+  write                        integral              1     'h0                           
+  apb_paddr                    integral              32    'h329b43a0                    
+  apb_write_data               integral              32    'h6f3c4514                    
+  prdata                       integral              32    'h0                           
+  pready                       integral              1     'h0                           
+  pslverr                      integral              1     'h0                           
+  psel                         integral              1     'h0                           
+  pwrite                       integral              1     'h0                           
+  paddr                        integral              32    'h0                           
+  pwdata                       integral              32    'h0                           
+  apb_read_data_out            integral              32    'h0                           
+  apb_read_data_valid          integral              1     'h0                           
+  begin_time                   time                  64    1110000                       
+  depth                        int                   32    'd2                           
+  parent sequence (name)       string                4     jseq                          
+  parent sequence (full name)  string                30    uvm_test_top.env.apj.seqr.jseq
+  sequencer                    string                25    uvm_test_top.env.apj.seqr     
+-----------------------------------------------------------------------------------------
+  67781838 -------------  67781838
+-------------------------------------------------------------
+Name                   Type                  Size  Value     
+-------------------------------------------------------------
+trans                  apb_jtag_transaction  -     @4704     
+  transfer             integral              1     'h1       
+  read                 integral              1     'h1       
+  write                integral              1     'h0       
+  apb_paddr            integral              32    'h329b43a0
+  apb_write_data       integral              32    'h6f3c4514
+  prdata               integral              32    'h40a44ce 
+  pready               integral              1     'h0       
+  pslverr              integral              1     'h0       
+  psel                 integral              1     'h1       
+  pwrite               integral              1     'h0       
+  paddr                integral              32    'h329b43a0
+  pwdata               integral              32    'h0       
+  apb_read_data_out    integral              32    'h40a44ce 
+  apb_read_data_valid  integral              1     'h0       
+-------------------------------------------------------------
+the value of slave error is 0
+the value of slave error is 1
+the value of slave error is 0
+the value of slave error is 1
+-----------------------------------------------------------------------------------------
+Name                           Type                  Size  Value                         
+-----------------------------------------------------------------------------------------
+read_transaction               apb_jtag_transaction  -     @4765                         
+  transfer                     integral              1     'h1                           
+  read                         integral              1     'h0                           
+  write                        integral              1     'h1                           
+  apb_paddr                    integral              32    'h2f96c957                    
+  apb_write_data               integral              32    'hd2f8d713                    
+  prdata                       integral              32    'h0                           
+  pready                       integral              1     'h0                           
+  pslverr                      integral              1     'h0                           
+  psel                         integral              1     'h0                           
+  pwrite                       integral              1     'h0                           
+  paddr                        integral              32    'h0                           
+  pwdata                       integral              32    'h0                           
+  apb_read_data_out            integral              32    'h0                           
+  apb_read_data_valid          integral              1     'h0                           
+  begin_time                   time                  64    1290000                       
+  depth                        int                   32    'd2                           
+  parent sequence (name)       string                4     jseq                          
+  parent sequence (full name)  string                30    uvm_test_top.env.apj.seqr.jseq
+  sequencer                    string                25    uvm_test_top.env.apj.seqr     
+-----------------------------------------------------------------------------------------
+         0 -------------         0
+-------------------------------------------------------------
+Name                   Type                  Size  Value     
+-------------------------------------------------------------
+trans                  apb_jtag_transaction  -     @4664     
+  transfer             integral              1     'h1       
+  read                 integral              1     'h0       
+  write                integral              1     'h1       
+  apb_paddr            integral              32    'h2f96c957
+  apb_write_data       integral              32    'hd2f8d713
+  prdata               integral              32    'h0       
+  pready               integral              1     'h0       
+  pslverr              integral              1     'h0       
+  psel                 integral              1     'h1       
+  pwrite               integral              1     'h0       
+  paddr                integral              32    'h2f96c957
+  pwdata               integral              32    'hd2f8d713
+  apb_read_data_out    integral              32    'h0       
+  apb_read_data_valid  integral              1     'h0       
+-------------------------------------------------------------
+data written into slave at memory [2f96c957] = d2f8d713
+the value of slave error is 1
+the value of slave error is 0
+-----------------------------------------------------------------------------------------
+Name                           Type                  Size  Value                         
+-----------------------------------------------------------------------------------------
+read_transaction               apb_jtag_transaction  -     @4780                         
+  transfer                     integral              1     'h1                           
+  read                         integral              1     'h1                           
+  write                        integral              1     'h0                           
+  apb_paddr                    integral              32    'hb73779bb                    
+  apb_write_data               integral              32    'hdbb2fa8c                    
+  prdata                       integral              32    'h0                           
+  pready                       integral              1     'h0                           
+  pslverr                      integral              1     'h0                           
+  psel                         integral              1     'h0                           
+  pwrite                       integral              1     'h0                           
+  paddr                        integral              32    'h0                           
+  pwdata                       integral              32    'h0                           
+  apb_read_data_out            integral              32    'h0                           
+  apb_read_data_valid          integral              1     'h0                           
+  begin_time                   time                  64    1390000                       
+  depth                        int                   32    'd2                           
+  parent sequence (name)       string                4     jseq                          
+  parent sequence (full name)  string                30    uvm_test_top.env.apj.seqr.jseq
+  sequencer                    string                25    uvm_test_top.env.apj.seqr     
+-----------------------------------------------------------------------------------------
+3087794589 -------------3087794589
+-------------------------------------------------------------
+Name                   Type                  Size  Value     
+-------------------------------------------------------------
+trans                  apb_jtag_transaction  -     @4760     
+  transfer             integral              1     'h1       
+  read                 integral              1     'h1       
+  write                integral              1     'h0       
+  apb_paddr            integral              32    'hb73779bb
+  apb_write_data       integral              32    'hdbb2fa8c
+  prdata               integral              32    'hb80c019d
+  pready               integral              1     'h0       
+  pslverr              integral              1     'h0       
+  psel                 integral              1     'h1       
+  pwrite               integral              1     'h0       
+  paddr                integral              32    'hb73779bb
+  pwdata               integral              32    'h0       
+  apb_read_data_out    integral              32    'hb80c019d
+  apb_read_data_valid  integral              1     'h0       
+-------------------------------------------------------------
+the value of slave error is 1
+-----------------------------------------------------------------------------------------
+Name                           Type                  Size  Value                         
+-----------------------------------------------------------------------------------------
+read_transaction               apb_jtag_transaction  -     @4669                         
+  transfer                     integral              1     'h1                           
+  read                         integral              1     'h1                           
+  write                        integral              1     'h0                           
+  apb_paddr                    integral              32    'hb48b1be7                    
+  apb_write_data               integral              32    'h1b28c29a                    
+  prdata                       integral              32    'h0                           
+  pready                       integral              1     'h0                           
+  pslverr                      integral              1     'h0                           
+  psel                         integral              1     'h0                           
+  pwrite                       integral              1     'h0                           
+  paddr                        integral              32    'h0                           
+  pwdata                       integral              32    'h0                           
+  apb_read_data_out            integral              32    'h0                           
+  apb_read_data_valid          integral              1     'h0                           
+  begin_time                   time                  64    1530000                       
+  depth                        int                   32    'd2                           
+  parent sequence (name)       string                4     jseq                          
+  parent sequence (full name)  string                30    uvm_test_top.env.apj.seqr.jseq
+  sequencer                    string                25    uvm_test_top.env.apj.seqr     
+-----------------------------------------------------------------------------------------
+3087794589 -------------3087794589
+-------------------------------------------------------------
+Name                   Type                  Size  Value     
+-------------------------------------------------------------
+trans                  apb_jtag_transaction  -     @4753     
+  transfer             integral              1     'h1       
+  read                 integral              1     'h1       
+  write                integral              1     'h0       
+  apb_paddr            integral              32    'hb48b1be7
+  apb_write_data       integral              32    'h1b28c29a
+  prdata               integral              32    'hb80c019d
+  pready               integral              1     'h0       
+  pslverr              integral              1     'h0       
+  psel                 integral              1     'h1       
+  pwrite               integral              1     'h0       
+  paddr                integral              32    'hb48b1be7
+  pwdata               integral              32    'h0       
+  apb_read_data_out    integral              32    'hb80c019d
+  apb_read_data_valid  integral              1     'h0       
+-------------------------------------------------------------
+the value of slave error is 0
+the value of slave error is 1
+the value of slave error is 1
+-----------------------------------------------------------------------------------------
+Name                           Type                  Size  Value                         
+-----------------------------------------------------------------------------------------
+read_transaction               apb_jtag_transaction  -     @4784                         
+  transfer                     integral              1     'h1                           
+  read                         integral              1     'h1                           
+  write                        integral              1     'h0                           
+  apb_paddr                    integral              32    'hfc6e99e8                    
+  apb_write_data               integral              32    'he9a821d7                    
+  prdata                       integral              32    'h0                           
+  pready                       integral              1     'h0                           
+  pslverr                      integral              1     'h0                           
+  psel                         integral              1     'h0                           
+  pwrite                       integral              1     'h0                           
+  paddr                        integral              32    'h0                           
+  pwdata                       integral              32    'h0                           
+  apb_read_data_out            integral              32    'h0                           
+  apb_read_data_valid          integral              1     'h0                           
+  begin_time                   time                  64    1650000                       
+  depth                        int                   32    'd2                           
+  parent sequence (name)       string                4     jseq                          
+  parent sequence (full name)  string                30    uvm_test_top.env.apj.seqr.jseq
+  sequencer                    string                25    uvm_test_top.env.apj.seqr     
+-----------------------------------------------------------------------------------------
+2120887596 -------------2120887596
+-------------------------------------------------------------
+Name                   Type                  Size  Value     
+-------------------------------------------------------------
+trans                  apb_jtag_transaction  -     @4745     
+  transfer             integral              1     'h1       
+  read                 integral              1     'h1       
+  write                integral              1     'h0       
+  apb_paddr            integral              32    'hfc6e99e8
+  apb_write_data       integral              32    'he9a821d7
+  prdata               integral              32    'h7e6a2d2c
+  pready               integral              1     'h0       
+  pslverr              integral              1     'h0       
+  psel                 integral              1     'h1       
+  pwrite               integral              1     'h0       
+  paddr                integral              32    'hfc6e99e8
+  pwdata               integral              32    'h0       
+  apb_read_data_out    integral              32    'h7e6a2d2c
+  apb_read_data_valid  integral              1     'h0       
+-------------------------------------------------------------
+the value of slave error is 1
+the value of slave error is 0
+the value of slave error is 0
+the value of slave error is 0
+-----------------------------------------------------------------------------------------
+Name                           Type                  Size  Value                         
+-----------------------------------------------------------------------------------------
+read_transaction               apb_jtag_transaction  -     @4691                         
+  transfer                     integral              1     'h1                           
+  read                         integral              1     'h1                           
+  write                        integral              1     'h0                           
+  apb_paddr                    integral              32    'hfadb3806                    
+  apb_write_data               integral              32    'hd1e9c6a6                    
+  prdata                       integral              32    'h0                           
+  pready                       integral              1     'h0                           
+  pslverr                      integral              1     'h0                           
+  psel                         integral              1     'h0                           
+  pwrite                       integral              1     'h0                           
+  paddr                        integral              32    'h0                           
+  pwdata                       integral              32    'h0                           
+  apb_read_data_out            integral              32    'h0                           
+  apb_read_data_valid          integral              1     'h0                           
+  begin_time                   time                  64    1890000                       
+  depth                        int                   32    'd2                           
+  parent sequence (name)       string                4     jseq                          
+  parent sequence (full name)  string                30    uvm_test_top.env.apj.seqr.jseq
+  sequencer                    string                25    uvm_test_top.env.apj.seqr     
+-----------------------------------------------------------------------------------------
+         0 -------------         0
+-------------------------------------------------------------
+Name                   Type                  Size  Value     
+-------------------------------------------------------------
+trans                  apb_jtag_transaction  -     @4795     
+  transfer             integral              1     'h1       
+  read                 integral              1     'h1       
+  write                integral              1     'h0       
+  apb_paddr            integral              32    'hfadb3806
+  apb_write_data       integral              32    'hd1e9c6a6
+  prdata               integral              32    'h0       
+  pready               integral              1     'h0       
+  pslverr              integral              1     'h0       
+  psel                 integral              1     'h1       
+  pwrite               integral              1     'h0       
+  paddr                integral              32    'hfadb3806
+  pwdata               integral              32    'h0       
+  apb_read_data_out    integral              32    'h0       
+  apb_read_data_valid  integral              1     'h0       
+-------------------------------------------------------------
+the value of slave error is 1
+-----------------------------------------------------------------------------------------
+Name                           Type                  Size  Value                         
+-----------------------------------------------------------------------------------------
+read_transaction               apb_jtag_transaction  -     @4744                         
+  transfer                     integral              1     'h1                           
+  read                         integral              1     'h1                           
+  write                        integral              1     'h0                           
+  apb_paddr                    integral              32    'h7a093cf8                    
+  apb_write_data               integral              32    'h28bcf31d                    
+  prdata                       integral              32    'h0                           
+  pready                       integral              1     'h0                           
+  pslverr                      integral              1     'h0                           
+  psel                         integral              1     'h0                           
+  pwrite                       integral              1     'h0                           
+  paddr                        integral              32    'h0                           
+  pwdata                       integral              32    'h0                           
+  apb_read_data_out            integral              32    'h0                           
+  apb_read_data_valid          integral              1     'h0                           
+  begin_time                   time                  64    1950000                       
+  depth                        int                   32    'd2                           
+  parent sequence (name)       string                4     jseq                          
+  parent sequence (full name)  string                30    uvm_test_top.env.apj.seqr.jseq
+  sequencer                    string                25    uvm_test_top.env.apj.seqr     
+-----------------------------------------------------------------------------------------
+ 744512263 ------------- 744512263
+-------------------------------------------------------------
+Name                   Type                  Size  Value     
+-------------------------------------------------------------
+trans                  apb_jtag_transaction  -     @4773     
+  transfer             integral              1     'h1       
+  read                 integral              1     'h1       
+  write                integral              1     'h0       
+  apb_paddr            integral              32    'h7a093cf8
+  apb_write_data       integral              32    'h28bcf31d
+  prdata               integral              32    'h2c605b07
+  pready               integral              1     'h0       
+  pslverr              integral              1     'h0       
+  psel                 integral              1     'h1       
+  pwrite               integral              1     'h0       
+  paddr                integral              32    'h7a093cf8
+  pwdata               integral              32    'h0       
+  apb_read_data_out    integral              32    'h2c605b07
+  apb_read_data_valid  integral              1     'h0       
+-------------------------------------------------------------
+the value of slave error is 0
+-----------------------------------------------------------------------------------------
+Name                           Type                  Size  Value                         
+-----------------------------------------------------------------------------------------
+read_transaction               apb_jtag_transaction  -     @4736                         
+  transfer                     integral              1     'h1                           
+  read                         integral              1     'h0                           
+  write                        integral              1     'h1                           
+  apb_paddr                    integral              32    'h85173623                    
+  apb_write_data               integral              32    'hff63c339                    
+  prdata                       integral              32    'h0                           
+  pready                       integral              1     'h0                           
+  pslverr                      integral              1     'h0                           
+  psel                         integral              1     'h0                           
+  pwrite                       integral              1     'h0                           
+  paddr                        integral              32    'h0                           
+  pwdata                       integral              32    'h0                           
+  apb_read_data_out            integral              32    'h0                           
+  apb_read_data_valid          integral              1     'h0                           
+  begin_time                   time                  64    2090000                       
+  depth                        int                   32    'd2                           
+  parent sequence (name)       string                4     jseq                          
+  parent sequence (full name)  string                30    uvm_test_top.env.apj.seqr.jseq
+  sequencer                    string                25    uvm_test_top.env.apj.seqr     
+-----------------------------------------------------------------------------------------
+ 744512263 -------------         0
+-------------------------------------------------------------
+Name                   Type                  Size  Value     
+-------------------------------------------------------------
+trans                  apb_jtag_transaction  -     @4760     
+  transfer             integral              1     'h1       
+  read                 integral              1     'h0       
+  write                integral              1     'h1       
+  apb_paddr            integral              32    'h85173623
+  apb_write_data       integral              32    'hff63c339
+  prdata               integral              32    'h0       
+  pready               integral              1     'h0       
+  pslverr              integral              1     'h0       
+  psel                 integral              1     'h1       
+  pwrite               integral              1     'h0       
+  paddr                integral              32    'h85173623
+  pwdata               integral              32    'hff63c339
+  apb_read_data_out    integral              32    'h0       
+  apb_read_data_valid  integral              1     'h0       
+-------------------------------------------------------------
+data written into slave at memory [85173623] = ff63c339
+ 744512263 -------------         0
+-------------------------------------------------------------
+Name                   Type                  Size  Value     
+-------------------------------------------------------------
+trans                  apb_jtag_transaction  -     @4774     
+  transfer             integral              1     'h1       
+  read                 integral              1     'h0       
+  write                integral              1     'h1       
+  apb_paddr            integral              32    'h85173623
+  apb_write_data       integral              32    'hff63c339
+  prdata               integral              32    'h0       
+  pready               integral              1     'h0       
+  pslverr              integral              1     'h1       
+  psel                 integral              1     'h1       
+  pwrite               integral              1     'h0       
+  paddr                integral              32    'h85173623
+  pwdata               integral              32    'hff63c339
+  apb_read_data_out    integral              32    'h0       
+  apb_read_data_valid  integral              1     'h0       
+-------------------------------------------------------------
+the value of slave error is 1
+-----------------------------------------------------------------------------------------
+Name                           Type                  Size  Value                         
+-----------------------------------------------------------------------------------------
+read_transaction               apb_jtag_transaction  -     @4743                         
+  transfer                     integral              1     'h1                           
+  read                         integral              1     'h1                           
+  write                        integral              1     'h0                           
+  apb_paddr                    integral              32    'h6fd48597                    
+  apb_write_data               integral              32    'hf14a7ae1                    
+  prdata                       integral              32    'h0                           
+  pready                       integral              1     'h0                           
+  pslverr                      integral              1     'h0                           
+  psel                         integral              1     'h0                           
+  pwrite                       integral              1     'h0                           
+  paddr                        integral              32    'h0                           
+  pwdata                       integral              32    'h0                           
+  apb_read_data_out            integral              32    'h0                           
+  apb_read_data_valid          integral              1     'h0                           
+  begin_time                   time                  64    2150000                       
+  depth                        int                   32    'd2                           
+  parent sequence (name)       string                4     jseq                          
+  parent sequence (full name)  string                30    uvm_test_top.env.apj.seqr.jseq
+  sequencer                    string                25    uvm_test_top.env.apj.seqr     
+-----------------------------------------------------------------------------------------
+1294362332 -------------1294362332
+-------------------------------------------------------------
+Name                   Type                  Size  Value     
+-------------------------------------------------------------
+trans                  apb_jtag_transaction  -     @4715     
+  transfer             integral              1     'h1       
+  read                 integral              1     'h1       
+  write                integral              1     'h0       
+  apb_paddr            integral              32    'h6fd48597
+  apb_write_data       integral              32    'hf14a7ae1
+  prdata               integral              32    'h4d2666dc
+  pready               integral              1     'h0       
+  pslverr              integral              1     'h1       
+  psel                 integral              1     'h1       
+  pwrite               integral              1     'h0       
+  paddr                integral              32    'h6fd48597
+  pwdata               integral              32    'h0       
+  apb_read_data_out    integral              32    'h4d2666dc
+  apb_read_data_valid  integral              1     'h0       
+-------------------------------------------------------------
+the value of slave error is 1
+-----------------------------------------------------------------------------------------
+Name                           Type                  Size  Value                         
+-----------------------------------------------------------------------------------------
+read_transaction               apb_jtag_transaction  -     @4627                         
+  transfer                     integral              1     'h1                           
+  read                         integral              1     'h0                           
+  write                        integral              1     'h1                           
+  apb_paddr                    integral              32    'h84e98bf2                    
+  apb_write_data               integral              32    'h21c95eca                    
+  prdata                       integral              32    'h0                           
+  pready                       integral              1     'h0                           
+  pslverr                      integral              1     'h0                           
+  psel                         integral              1     'h0                           
+  pwrite                       integral              1     'h0                           
+  paddr                        integral              32    'h0                           
+  pwdata                       integral              32    'h0                           
+  apb_read_data_out            integral              32    'h0                           
+  apb_read_data_valid          integral              1     'h0                           
+  begin_time                   time                  64    2190000                       
+  depth                        int                   32    'd2                           
+  parent sequence (name)       string                4     jseq                          
+  parent sequence (full name)  string                30    uvm_test_top.env.apj.seqr.jseq
+  sequencer                    string                25    uvm_test_top.env.apj.seqr     
+-----------------------------------------------------------------------------------------
+1294362332 -------------         0
+-------------------------------------------------------------
+Name                   Type                  Size  Value     
+-------------------------------------------------------------
+trans                  apb_jtag_transaction  -     @4706     
+  transfer             integral              1     'h1       
+  read                 integral              1     'h0       
+  write                integral              1     'h1       
+  apb_paddr            integral              32    'h84e98bf2
+  apb_write_data       integral              32    'h21c95eca
+  prdata               integral              32    'h0       
+  pready               integral              1     'h0       
+  pslverr              integral              1     'h0       
+  psel                 integral              1     'h1       
+  pwrite               integral              1     'h0       
+  paddr                integral              32    'h84e98bf2
+  pwdata               integral              32    'h21c95eca
+  apb_read_data_out    integral              32    'h0       
+  apb_read_data_valid  integral              1     'h0       
+-------------------------------------------------------------
+1294362332 -------------         0
+-------------------------------------------------------------
+Name                   Type                  Size  Value     
+-------------------------------------------------------------
+trans                  apb_jtag_transaction  -     @4764     
+  transfer             integral              1     'h1       
+  read                 integral              1     'h0       
+  write                integral              1     'h1       
+  apb_paddr            integral              32    'h84e98bf2
+  apb_write_data       integral              32    'h21c95eca
+  prdata               integral              32    'h0       
+  pready               integral              1     'h0       
+  pslverr              integral              1     'h0       
+  psel                 integral              1     'h1       
+  pwrite               integral              1     'h0       
+  paddr                integral              32    'h84e98bf2
+  pwdata               integral              32    'h21c95eca
+  apb_read_data_out    integral              32    'h0       
+  apb_read_data_valid  integral              1     'h0       
+-------------------------------------------------------------
+1294362332 -------------         0
+-------------------------------------------------------------
+Name                   Type                  Size  Value     
+-------------------------------------------------------------
+trans                  apb_jtag_transaction  -     @4648     
+  transfer             integral              1     'h1       
+  read                 integral              1     'h0       
+  write                integral              1     'h1       
+  apb_paddr            integral              32    'h84e98bf2
+  apb_write_data       integral              32    'h21c95eca
+  prdata               integral              32    'h0       
+  pready               integral              1     'h0       
+  pslverr              integral              1     'h0       
+  psel                 integral              1     'h1       
+  pwrite               integral              1     'h0       
+  paddr                integral              32    'h84e98bf2
+  pwdata               integral              32    'h21c95eca
+  apb_read_data_out    integral              32    'h0       
+  apb_read_data_valid  integral              1     'h0       
+-------------------------------------------------------------
+data written into slave at memory [84e98bf2] = 21c95eca
+the value of slave error is 0
+-----------------------------------------------------------------------------------------
+Name                           Type                  Size  Value                         
+-----------------------------------------------------------------------------------------
+read_transaction               apb_jtag_transaction  -     @4793                         
+  transfer                     integral              1     'h1                           
+  read                         integral              1     'h0                           
+  write                        integral              1     'h1                           
+  apb_paddr                    integral              32    'h33c83cfb                    
+  apb_write_data               integral              32    'h385ad3dc                    
+  prdata                       integral              32    'h0                           
+  pready                       integral              1     'h0                           
+  pslverr                      integral              1     'h0                           
+  psel                         integral              1     'h0                           
+  pwrite                       integral              1     'h0                           
+  paddr                        integral              32    'h0                           
+  pwdata                       integral              32    'h0                           
+  apb_read_data_out            integral              32    'h0                           
+  apb_read_data_valid          integral              1     'h0                           
+  begin_time                   time                  64    2330000                       
+  depth                        int                   32    'd2                           
+  parent sequence (name)       string                4     jseq                          
+  parent sequence (full name)  string                30    uvm_test_top.env.apj.seqr.jseq
+  sequencer                    string                25    uvm_test_top.env.apj.seqr     
+-----------------------------------------------------------------------------------------
+1294362332 -------------         0
+-------------------------------------------------------------
+Name                   Type                  Size  Value     
+-------------------------------------------------------------
+trans                  apb_jtag_transaction  -     @4787     
+  transfer             integral              1     'h1       
+  read                 integral              1     'h0       
+  write                integral              1     'h1       
+  apb_paddr            integral              32    'h33c83cfb
+  apb_write_data       integral              32    'h385ad3dc
+  prdata               integral              32    'h0       
+  pready               integral              1     'h0       
+  pslverr              integral              1     'h0       
+  psel                 integral              1     'h1       
+  pwrite               integral              1     'h0       
+  paddr                integral              32    'h33c83cfb
+  pwdata               integral              32    'h385ad3dc
+  apb_read_data_out    integral              32    'h0       
+  apb_read_data_valid  integral              1     'h0       
+-------------------------------------------------------------
+data written into slave at memory [33c83cfb] = 385ad3dc
+the value of slave error is 1
+-----------------------------------------------------------------------------------------
+Name                           Type                  Size  Value                         
+-----------------------------------------------------------------------------------------
+read_transaction               apb_jtag_transaction  -     @4644                         
+  transfer                     integral              1     'h1                           
+  read                         integral              1     'h1                           
+  write                        integral              1     'h0                           
+  apb_paddr                    integral              32    'h6b88a9ae                    
+  apb_write_data               integral              32    'hf8b7d228                    
+  prdata                       integral              32    'h0                           
+  pready                       integral              1     'h0                           
+  pslverr                      integral              1     'h0                           
+  psel                         integral              1     'h0                           
+  pwrite                       integral              1     'h0                           
+  paddr                        integral              32    'h0                           
+  pwdata                       integral              32    'h0                           
+  apb_read_data_out            integral              32    'h0                           
+  apb_read_data_valid          integral              1     'h0                           
+  begin_time                   time                  64    2370000                       
+  depth                        int                   32    'd2                           
+  parent sequence (name)       string                4     jseq                          
+  parent sequence (full name)  string                30    uvm_test_top.env.apj.seqr.jseq
+  sequencer                    string                25    uvm_test_top.env.apj.seqr     
+-----------------------------------------------------------------------------------------
+1294362332 -------------1294362332
+-------------------------------------------------------------
+Name                   Type                  Size  Value     
+-------------------------------------------------------------
+trans                  apb_jtag_transaction  -     @4765     
+  transfer             integral              1     'h1       
+  read                 integral              1     'h1       
+  write                integral              1     'h0       
+  apb_paddr            integral              32    'h6b88a9ae
+  apb_write_data       integral              32    'hf8b7d228
+  prdata               integral              32    'h4d2666dc
+  pready               integral              1     'h0       
+  pslverr              integral              1     'h0       
+  psel                 integral              1     'h1       
+  pwrite               integral              1     'h0       
+  paddr                integral              32    'h6b88a9ae
+  pwdata               integral              32    'h0       
+  apb_read_data_out    integral              32    'h4d2666dc
+  apb_read_data_valid  integral              1     'h0       
+-------------------------------------------------------------
+the value of slave error is 1
+the value of slave error is 0
+the value of slave error is 0
+the value of slave error is 1
+-----------------------------------------------------------------------------------------
+Name                           Type                  Size  Value                         
+-----------------------------------------------------------------------------------------
+read_transaction               apb_jtag_transaction  -     @4723                         
+  transfer                     integral              1     'h1                           
+  read                         integral              1     'h0                           
+  write                        integral              1     'h1                           
+  apb_paddr                    integral              32    'h1f15c833                    
+  apb_write_data               integral              32    'he91cacee                    
+  prdata                       integral              32    'h0                           
+  pready                       integral              1     'h0                           
+  pslverr                      integral              1     'h0                           
+  psel                         integral              1     'h0                           
+  pwrite                       integral              1     'h0                           
+  paddr                        integral              32    'h0                           
+  pwdata                       integral              32    'h0                           
+  apb_read_data_out            integral              32    'h0                           
+  apb_read_data_valid          integral              1     'h0                           
+  begin_time                   time                  64    2530000                       
+  depth                        int                   32    'd2                           
+  parent sequence (name)       string                4     jseq                          
+  parent sequence (full name)  string                30    uvm_test_top.env.apj.seqr.jseq
+  sequencer                    string                25    uvm_test_top.env.apj.seqr     
+-----------------------------------------------------------------------------------------
+         0 -------------         0
+-------------------------------------------------------------
+Name                   Type                  Size  Value     
+-------------------------------------------------------------
+trans                  apb_jtag_transaction  -     @4669     
+  transfer             integral              1     'h1       
+  read                 integral              1     'h0       
+  write                integral              1     'h1       
+  apb_paddr            integral              32    'h1f15c833
+  apb_write_data       integral              32    'he91cacee
+  prdata               integral              32    'h0       
+  pready               integral              1     'h0       
+  pslverr              integral              1     'h0       
+  psel                 integral              1     'h1       
+  pwrite               integral              1     'h0       
+  paddr                integral              32    'h1f15c833
+  pwdata               integral              32    'he91cacee
+  apb_read_data_out    integral              32    'h0       
+  apb_read_data_valid  integral              1     'h0       
+-------------------------------------------------------------
+data written into slave at memory [1f15c833] = e91cacee
+the value of slave error is 1
+the value of slave error is 1
+the value of slave error is 0
+the value of slave error is 0
+the value of slave error is 1
+the value of slave error is 1
+-----------------------------------------------------------------------------------------
+Name                           Type                  Size  Value                         
+-----------------------------------------------------------------------------------------
+read_transaction               apb_jtag_transaction  -     @4652                         
+  transfer                     integral              1     'h1                           
+  read                         integral              1     'h0                           
+  write                        integral              1     'h1                           
+  apb_paddr                    integral              32    'h7de2e281                    
+  apb_write_data               integral              32    'h4dd1b031                    
+  prdata                       integral              32    'h0                           
+  pready                       integral              1     'h0                           
+  pslverr                      integral              1     'h0                           
+  psel                         integral              1     'h0                           
+  pwrite                       integral              1     'h0                           
+  paddr                        integral              32    'h0                           
+  pwdata                       integral              32    'h0                           
+  apb_read_data_out            integral              32    'h0                           
+  apb_read_data_valid          integral              1     'h0                           
+  begin_time                   time                  64    2790000                       
+  depth                        int                   32    'd2                           
+  parent sequence (name)       string                4     jseq                          
+  parent sequence (full name)  string                30    uvm_test_top.env.apj.seqr.jseq
+  sequencer                    string                25    uvm_test_top.env.apj.seqr     
+-----------------------------------------------------------------------------------------
+         0 -------------         0
+-------------------------------------------------------------
+Name                   Type                  Size  Value     
+-------------------------------------------------------------
+trans                  apb_jtag_transaction  -     @4642     
+  transfer             integral              1     'h1       
+  read                 integral              1     'h0       
+  write                integral              1     'h1       
+  apb_paddr            integral              32    'h7de2e281
+  apb_write_data       integral              32    'h4dd1b031
+  prdata               integral              32    'h0       
+  pready               integral              1     'h0       
+  pslverr              integral              1     'h0       
+  psel                 integral              1     'h1       
+  pwrite               integral              1     'h0       
+  paddr                integral              32    'h7de2e281
+  pwdata               integral              32    'h4dd1b031
+  apb_read_data_out    integral              32    'h0       
+  apb_read_data_valid  integral              1     'h0       
+-------------------------------------------------------------
+data written into slave at memory [7de2e281] = 4dd1b031
+the value of slave error is 0
+the value of slave error is 0
+-----------------------------------------------------------------------------------------
+Name                           Type                  Size  Value                         
+-----------------------------------------------------------------------------------------
+read_transaction               apb_jtag_transaction  -     @4779                         
+  transfer                     integral              1     'h1                           
+  read                         integral              1     'h1                           
+  write                        integral              1     'h0                           
+  apb_paddr                    integral              32    'hcea2a05d                    
+  apb_write_data               integral              32    'hff05ebc1                    
+  prdata                       integral              32    'h0                           
+  pready                       integral              1     'h0                           
+  pslverr                      integral              1     'h0                           
+  psel                         integral              1     'h0                           
+  pwrite                       integral              1     'h0                           
+  paddr                        integral              32    'h0                           
+  pwdata                       integral              32    'h0                           
+  apb_read_data_out            integral              32    'h0                           
+  apb_read_data_valid          integral              1     'h0                           
+  begin_time                   time                  64    2890000                       
+  depth                        int                   32    'd2                           
+  parent sequence (name)       string                4     jseq                          
+  parent sequence (full name)  string                30    uvm_test_top.env.apj.seqr.jseq
+  sequencer                    string                25    uvm_test_top.env.apj.seqr     
+-----------------------------------------------------------------------------------------
+         0 -------------         0
+-------------------------------------------------------------
+Name                   Type                  Size  Value     
+-------------------------------------------------------------
+trans                  apb_jtag_transaction  -     @4734     
+  transfer             integral              1     'h1       
+  read                 integral              1     'h1       
+  write                integral              1     'h0       
+  apb_paddr            integral              32    'hcea2a05d
+  apb_write_data       integral              32    'hff05ebc1
+  prdata               integral              32    'h0       
+  pready               integral              1     'h0       
+  pslverr              integral              1     'h0       
+  psel                 integral              1     'h1       
+  pwrite               integral              1     'h0       
+  paddr                integral              32    'hcea2a05d
+  pwdata               integral              32    'h0       
+  apb_read_data_out    integral              32    'h0       
+  apb_read_data_valid  integral              1     'h0       
+-------------------------------------------------------------
+the value of slave error is 1
+-----------------------------------------------------------------------------------------
+Name                           Type                  Size  Value                         
+-----------------------------------------------------------------------------------------
+read_transaction               apb_jtag_transaction  -     @4802                         
+  transfer                     integral              1     'h1                           
+  read                         integral              1     'h0                           
+  write                        integral              1     'h1                           
+  apb_paddr                    integral              32    'hc781d66e                    
+  apb_write_data               integral              32    'h8062957f                    
+  prdata                       integral              32    'h0                           
+  pready                       integral              1     'h0                           
+  pslverr                      integral              1     'h0                           
+  psel                         integral              1     'h0                           
+  pwrite                       integral              1     'h0                           
+  paddr                        integral              32    'h0                           
+  pwdata                       integral              32    'h0                           
+  apb_read_data_out            integral              32    'h0                           
+  apb_read_data_valid          integral              1     'h0                           
+  begin_time                   time                  64    2950000                       
+  depth                        int                   32    'd2                           
+  parent sequence (name)       string                4     jseq                          
+  parent sequence (full name)  string                30    uvm_test_top.env.apj.seqr.jseq
+  sequencer                    string                25    uvm_test_top.env.apj.seqr     
+-----------------------------------------------------------------------------------------
+2216456922 -------------         0
+-------------------------------------------------------------
+Name                   Type                  Size  Value     
+-------------------------------------------------------------
+trans                  apb_jtag_transaction  -     @4798     
+  transfer             integral              1     'h1       
+  read                 integral              1     'h0       
+  write                integral              1     'h1       
+  apb_paddr            integral              32    'hc781d66e
+  apb_write_data       integral              32    'h8062957f
+  prdata               integral              32    'h0       
+  pready               integral              1     'h0       
+  pslverr              integral              1     'h0       
+  psel                 integral              1     'h1       
+  pwrite               integral              1     'h0       
+  paddr                integral              32    'hc781d66e
+  pwdata               integral              32    'h8062957f
+  apb_read_data_out    integral              32    'h0       
+  apb_read_data_valid  integral              1     'h0       
+-------------------------------------------------------------
+2216456922 -------------         0
+-------------------------------------------------------------
+Name                   Type                  Size  Value     
+-------------------------------------------------------------
+trans                  apb_jtag_transaction  -     @4727     
+  transfer             integral              1     'h1       
+  read                 integral              1     'h0       
+  write                integral              1     'h1       
+  apb_paddr            integral              32    'hc781d66e
+  apb_write_data       integral              32    'h8062957f
+  prdata               integral              32    'h0       
+  pready               integral              1     'h0       
+  pslverr              integral              1     'h0       
+  psel                 integral              1     'h1       
+  pwrite               integral              1     'h0       
+  paddr                integral              32    'hc781d66e
+  pwdata               integral              32    'h8062957f
+  apb_read_data_out    integral              32    'h0       
+  apb_read_data_valid  integral              1     'h0       
+-------------------------------------------------------------
+data written into slave at memory [c781d66e] = 8062957f
+2216456922 -------------         0
+-------------------------------------------------------------
+Name                   Type                  Size  Value     
+-------------------------------------------------------------
+trans                  apb_jtag_transaction  -     @4776     
+  transfer             integral              1     'h1       
+  read                 integral              1     'h0       
+  write                integral              1     'h1       
+  apb_paddr            integral              32    'hc781d66e
+  apb_write_data       integral              32    'h8062957f
+  prdata               integral              32    'h0       
+  pready               integral              1     'h0       
+  pslverr              integral              1     'h0       
+  psel                 integral              1     'h1       
+  pwrite               integral              1     'h0       
+  paddr                integral              32    'hc781d66e
+  pwdata               integral              32    'h8062957f
+  apb_read_data_out    integral              32    'h0       
+  apb_read_data_valid  integral              1     'h0       
+-------------------------------------------------------------
+the value of slave error is 0
+the value of slave error is 0
+
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :    1
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+Simulation complete via $finish(1) at time 3090 NS + 50
+/tools/cadence_march2021/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_root.svh:457     $finish;
+xcelium> exit
+
+coverage setup:
+  workdir  :  cov_work
+  dutinst  :  apb_top.dut(apb_master)
+  scope    :  scope
+  testname :  test_sv91197
+
+coverage files:
+  model(design data) :  cov_work/scope/icc_4eb6f5eb_00000000.ucm (reused)
+  data               :  cov_work/scope/test_sv91197/icc_4eb6f5eb_00000000.ucd
+TOOL:	xrun(64)	22.09-s003: Exiting on Dec 27, 2024 at 16:47:45 IST  (total: 00:00:01)

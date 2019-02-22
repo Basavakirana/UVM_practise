@@ -1,0 +1,40 @@
+irun(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s051: Started on Feb 22, 2019 at 07:42:56 IST
+irun
+	-sv
+	-uvm
+	-access +rwc
+	-f compile_file.f
+		../test/test_pkg.sv
+		../env/fifo_top.sv
+	+UVM_TESTNAME=fifo_test
+file: ../test/test_pkg.sv
+    fifo_agent fifo_agt;
+             |
+ncvlog: *E,NOIPRT (../env/fifo_env_config.sv,9|13): Unrecognized declaration 'fifo_agent' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
+(`include file: ../env/fifo_env_config.sv line 9, file: ../test/test_pkg.sv line 8)
+    function fifo_drv :: new(string name="fifo_drv",uvm_component parent);
+                                                                       |
+ncvlog: *W,PMBMDV (../agent/fifo_drv.sv,12|71): Out of block declaration missing default argument value. The prototype declaration is used.
+(`include file: ../agent/fifo_drv.sv line 13, file: ../test/test_pkg.sv line 9)
+    `include "../agent/fifo_agt.sv"
+                                  |
+ncvlog: *E,COFILX (../test/test_pkg.sv,12|34): cannot open include file '../agent/fifo_agt.sv'.
+     fifo_agent fifo_agth;
+              |
+ncvlog: *E,NOIPRT (../agent/fifo_agt_top.sv,7|14): Unrecognized declaration 'fifo_agent' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
+(`include file: ../agent/fifo_agt_top.sv line 7, file: ../test/test_pkg.sv line 13)
+    `include "fifo_test.sv"
+                          |
+ncvlog: *E,COFILX (../test/test_pkg.sv,18|26): cannot open include file 'fifo_test.sv'.
+	package worklib.test_pkg:sv
+		errors: 4, warnings: 1
+file: ../env/fifo_top.sv
+    import test_pkg::*;
+                  |
+ncvlog: *E,NOPBIND (../env/fifo_top.sv,20|18): Package test_pkg could not be bound.
+	module worklib.fifo_top:sv
+		errors: 1, warnings: 0
+ncvlog: *F,NOTOPL: no top-level unit found, must have recursive instances.
+irun: *E,VLGERR: An error occurred during parsing.  Review the log file for errors with the code *E and fix those identified problems to proceed.  Exiting with code (status 2).
+TOOL:	irun(64)	15.20-s051: Exiting on Feb 22, 2019 at 07:42:56 IST  (total: 00:00:00)
