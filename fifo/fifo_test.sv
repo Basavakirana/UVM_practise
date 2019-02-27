@@ -22,13 +22,13 @@ endclass
 
     function void fifo_test :: build_phase(uvm_phase phase);
         env_configh = fifo_env_config::type_id::create("env_configh");
+        env_configh.no_of_agents = 2;
+        env_configh.has_agent = 1;
+        env_configh.has_sb = 1;
         if(env_configh.has_agent) begin
             agt_configh = fifo_agt_config::type_id::create("agt_configh");
             agt_configh.is_active = UVM_ACTIVE;
             env_configh.agt_configh = agt_configh; end 
-        env_configh.no_of_agents = 1;
-        env_configh.has_agent = 1;
-        env_configh.has_sb = 1;
         uvm_config_db #(fifo_env_config)::set(this,"*","fifo_env_config",env_configh);
          super.build_phase(phase);
         envh = fifo_env::type_id::create("envh",this);

@@ -17,5 +17,5 @@ class env_config extends uvm_object;
 endclass
 
     function env_config :: new(string name="env_config");
-        super.new("name");
+        super.new(name);
     endfunction

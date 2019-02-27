@@ -15,6 +15,6 @@ endclass
 
     function void rd_mon :: build_phase(uvm_phase phase);
         super.build_phase(phase);
-        if(uvm_config_db #(rd_agt_config) :: get(this,"","rd_agt_config",rd_agt_configh)) begin
+        if(!uvm_config_db #(rd_agt_config) :: get(this,"","rd_agt_config",rd_agt_configh)) begin
             `uvm_fatal("get_type_name()","cannot get rd_agt_config data"); end
     endfunction

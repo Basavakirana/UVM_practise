@@ -7,5 +7,5 @@ class vseqr extends uvm_sequencer #(uvm_sequence_item);
 endclass
 
     function vseqr :: new(string name="vseqr",uvm_component parent);
-        super.new(name,this);
+        super.new(name,parent);
     endfunction

@@ -7,5 +7,5 @@ class wr_seqr extends uvm_sequencer #(wr_trans);
 endclass
 
     function wr_seqr :: new(string name="wr_seqr",uvm_component parent);
-        super.new(name);
+        super.new(name,parent);
     endfunction

@@ -17,8 +17,8 @@ endclass
 
     function void rd_agt_top :: build_phase(uvm_phase phase);
         super.build_phase(phase);
-        if(uvm_config_db #(env_config) :: get(this,"","env_config",env_configh)) begin
-            `uvm_fatal("get_type_name()","cannot get env config data"); end
+        if(!uvm_config_db #(env_config) :: get(this,"","env_config",env_configh)) begin
+            `uvm_fatal(get_full_name(),"cannot get env config data"); end
         rd_agth = new[env_configh.no_of_rd_agt];
         if(env_configh.has_rd_agt) begin
             foreach(rd_agth[i])

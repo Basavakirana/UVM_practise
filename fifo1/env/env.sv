@@ -19,8 +19,8 @@ endclass
 
     function void env :: build_phase(uvm_phase phase);
         super.build_phase(phase);
-        if(uvm_config_db #(env_config) :: get(this,"","env_config",env_configh)) begin
-            `uvm_fatal("get_type_name()","cannot get env_config data"); end
+        if(!uvm_config_db #(env_config) :: get(this,"","env_config",env_configh)) begin
+            `uvm_fatal(get_full_name(),"cannot get env_config data"); end
         if(env_configh.has_wr_agt) begin
             wr_agt_toph = wr_agt_top::type_id::create("wr_agt_toph",this); end
         if(env_configh.has_rd_agt) begin

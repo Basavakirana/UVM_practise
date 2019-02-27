@@ -19,8 +19,8 @@ endclass
 
     function void rd_agent :: build_phase(uvm_phase phase);
         super.build_phase(phase);
-        if(uvm_config_db #(rd_agt_config) :: get(this,"","rd_agt_config",rd_agt_configh)) begin
-            `uvm_fatal("get_type_name()","cannot get rd_agt config data"); end
+        if(!uvm_config_db #(rd_agt_config) :: get(this,"","rd_agt_config",rd_agt_configh)) begin
+            `uvm_fatal(get_full_name(),"cannot get rd_agt config data"); end
         rd_monh = rd_mon::type_id::create("rd_monh",this); 
         if(rd_agt_configh.is_active==UVM_ACTIVE) begin
             rd_drvh = rd_drv::type_id::create("rd_drvh",this);
