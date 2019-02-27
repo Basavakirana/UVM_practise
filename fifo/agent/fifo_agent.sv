@@ -7,6 +7,7 @@ class fifo_agent extends uvm_agent;
     fifo_mon  monh;
     fifo_agt_config agt_configh;
 
+
     extern function new(string name="fifo_agent",uvm_component parent);
     extern function void build_phase(uvm_phase phase);
     extern function void connect_phase(uvm_phase phase);
@@ -22,6 +23,7 @@ endclass
         if(!uvm_config_db #(fifo_agt_config)::get(this,"","fifo_agt_config",agt_configh))begin
             `uvm_fatal("get_type_name()","cannot get agent config data");end
         monh = fifo_mon::type_id::create("monh",this);
+        
         if(agt_configh.is_active==UVM_ACTIVE)begin
             seqrh = fifo_seqr::type_id::create("seqrh",this);
             drvh = fifo_drv::type_id::create("drvh",this);end
@@ -31,4 +33,4 @@ endclass
         super.connect_phase(phase);
         if(agt_configh.is_active==UVM_ACTIVE)begin
             drvh.seq_item_port.connect(seqrh.seq_item_export);end
-    endfunction
+    endfunction  

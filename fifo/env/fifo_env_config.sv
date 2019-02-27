@@ -2,11 +2,12 @@ class fifo_env_config extends uvm_object;
 
     `uvm_object_utils(fifo_env_config)
 
-    int no_of_agents;
-    bit has_agent;
-    bit has_sb;
+    int no_of_agents=1;
+    bit has_agent=1;
+    bit has_sb=1;
+ //   uvm_active_passive_enum is_active=UVM_ACTIVE;
 
-    fifo_agent fifo_agt;
+    fifo_agt_config agt_configh;
 
     extern function new(string name="fifo_env_config");
 

@@ -9,7 +9,7 @@ class fifo_drv extends uvm_driver #(fifo_trans);
 
  endclass
 
-    function fifo_drv :: new(string name="fifo_drv",uvm_component parent);
+    function fifo_drv :: new(string name="fifo_drv",uvm_component parent=null);
         super.new(name,parent);
     endfunction
 

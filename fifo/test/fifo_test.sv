@@ -25,12 +25,12 @@ endclass
         envh = fifo_env::type_id::create("envh",this);
         env_configh = fifo_env_config::type_id::create("env_configh");
         if(env_configh.has_agent) begin
-            agt_configh = fifo_agt_configh::type_id::create("agt_configh");
+            agt_configh = fifo_agt_config::type_id::create("agt_configh");
             agt_configh.is_active = UVM_ACTIVE;
             env_configh.agt_configh = agt_configh; end
         env_configh.no_of_agents = no_of_agents;
         env_configh.has_agent = has_agent;
-        env_congigh.has_sb = has_sb;
+        env_configh.has_sb = has_sb;
         uvm_config_db #(fifo_env_config)::set(this,"*","fifo_env_config",env_configh);
     endfunction
 

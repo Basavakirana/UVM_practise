@@ -1,5 +1,5 @@
 irun(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
-TOOL:	irun(64)	15.20-s051: Started on Feb 22, 2019 at 07:42:56 IST
+TOOL:	irun(64)	15.20-s051: Started on Feb 23, 2019 at 07:36:40 IST
 irun
 	-sv
 	-uvm
@@ -8,33 +8,141 @@ irun
 		../test/test_pkg.sv
 		../env/fifo_top.sv
 	+UVM_TESTNAME=fifo_test
+Recompiling... reason: file '../env/fifo_env.sv' is newer than expected.
+	expected: Sat Feb 23 07:35:23 2019
+	actual:   Sat Feb 23 07:36:12 2019
+Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d
 file: ../test/test_pkg.sv
-    fifo_agent fifo_agt;
-             |
-ncvlog: *E,NOIPRT (../env/fifo_env_config.sv,9|13): Unrecognized declaration 'fifo_agent' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
-(`include file: ../env/fifo_env_config.sv line 9, file: ../test/test_pkg.sv line 8)
-    function fifo_drv :: new(string name="fifo_drv",uvm_component parent);
-                                                                       |
-ncvlog: *W,PMBMDV (../agent/fifo_drv.sv,12|71): Out of block declaration missing default argument value. The prototype declaration is used.
-(`include file: ../agent/fifo_drv.sv line 13, file: ../test/test_pkg.sv line 9)
-    `include "../agent/fifo_agt.sv"
-                                  |
-ncvlog: *E,COFILX (../test/test_pkg.sv,12|34): cannot open include file '../agent/fifo_agt.sv'.
-     fifo_agent fifo_agth;
-              |
-ncvlog: *E,NOIPRT (../agent/fifo_agt_top.sv,7|14): Unrecognized declaration 'fifo_agent' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
-(`include file: ../agent/fifo_agt_top.sv line 7, file: ../test/test_pkg.sv line 13)
-    `include "fifo_test.sv"
-                          |
-ncvlog: *E,COFILX (../test/test_pkg.sv,18|26): cannot open include file 'fifo_test.sv'.
 	package worklib.test_pkg:sv
-		errors: 4, warnings: 1
+		errors: 0, warnings: 0
 file: ../env/fifo_top.sv
-    import test_pkg::*;
-                  |
-ncvlog: *E,NOPBIND (../env/fifo_top.sv,20|18): Package test_pkg could not be bound.
 	module worklib.fifo_top:sv
-		errors: 1, warnings: 0
-ncvlog: *F,NOTOPL: no top-level unit found, must have recursive instances.
-irun: *E,VLGERR: An error occurred during parsing.  Review the log file for errors with the code *E and fix those identified problems to proceed.  Exiting with code (status 2).
-TOOL:	irun(64)	15.20-s051: Exiting on Feb 22, 2019 at 07:42:56 IST  (total: 00:00:00)
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		uvm_pkg
+		cdns_uvmapi
+		cdns_assert2uvm_pkg
+		cdns_uvm_pkg
+		test_pkg
+		fifo_top
+ncelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.fifo_top:sv <0x0cc163a8>
+			streams:   1, words:   510
+		worklib.test_pkg:sv <0x7c782eb3>
+			streams:   0, words:     0
+		worklib.uvm_pkg:sv <0x076550c0>
+			streams:  22, words: 21580
+		worklib.uvm_pkg:sv <0x0ff829da>
+			streams:  24, words: 27726
+		worklib.uvm_pkg:sv <0x10904752>
+			streams:  34, words: 42306
+		worklib.uvm_pkg:sv <0x10f632f4>
+			streams: 248, words: 447537
+		worklib.uvm_pkg:sv <0x15a76a83>
+			streams:  91, words: 162131
+		worklib.uvm_pkg:sv <0x15dc42c0>
+			streams:  24, words: 28514
+		worklib.uvm_pkg:sv <0x1e1ba177>
+			streams:  23, words: 27770
+		worklib.uvm_pkg:sv <0x4734ac3f>
+			streams: 175, words: 230144
+		worklib.uvm_pkg:sv <0x4d02c707>
+			streams:  24, words: 29836
+		worklib.uvm_pkg:sv <0x5bccbb04>
+			streams:  24, words: 27821
+		worklib.uvm_pkg:sv <0x6ab57cb1>
+			streams:  23, words: 25465
+		worklib.uvm_pkg:sv <0x7b2db2fd>
+			streams:  24, words: 30237
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                       Instances  Unique
+		Modules:                       1       1
+		Verilog packages:              5       5
+		Registers:                 14223   10199
+		Named events:                  4      12
+		Initial blocks:              293     157
+		Parallel blocks:              26      27
+		Assertions:                    2       2
+		SV Class declarations:       201     315
+		SV Class specializations:    390     390
+	Writing initial simulation snapshot: worklib.fifo_top:sv
+Loading snapshot worklib.fifo_top:sv .................... Done
+SVSEED default: 1
+ncsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+ncsim> source /tools/cadence/INCISIVE152/tools/inca/files/ncsimrc
+ncsim> source /tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/additions/sv/files/tcl/uvm_sim.tcl
+ncsim> run
+----------------------------------------------------------------
+CDNS-UVM-1.1d (15.20-s051)
+(C) 2007-2013 Mentor Graphics Corporation
+(C) 2007-2013 Cadence Design Systems, Inc.
+(C) 2006-2013 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test fifo_test...
+UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+----------------------------------------------------------------
+Name                         Type                    Size  Value
+----------------------------------------------------------------
+uvm_test_top                 fifo_test               -     @2640
+  envh                       fifo_env                -     @2724
+    agt_toph                 fifo_agt_top            -     @2757
+      fifo_agth              fifo_agent              -     @2834
+        drvh                 fifo_drv                -     @3535
+          rsp_port           uvm_analysis_port       -     @3634
+          seq_item_port      uvm_seq_item_pull_port  -     @3585
+        monh                 fifo_mon                -     @2867
+        seqrh                fifo_seqr               -     @2896
+          rsp_export         uvm_analysis_export     -     @2954
+          seq_item_export    uvm_seq_item_pull_imp   -     @3504
+          arbitration_queue  array                   0     -    
+          lock_queue         array                   0     -    
+          num_last_reqs      integral                32    'd1  
+          num_last_rsps      integral                32    'd1  
+    sbh                      fifo_sb                 -     @2788
+----------------------------------------------------------------
+
+
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :    2
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[UVMTOP]     1
+Simulation complete via $finish(1) at time 0 FS + 179
+/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_root.svh:457     $finish;
+ncsim> exit
+TOOL:	irun(64)	15.20-s051: Exiting on Feb 23, 2019 at 07:36:44 IST  (total: 00:00:04)

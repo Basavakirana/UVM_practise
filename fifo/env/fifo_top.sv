@@ -18,7 +18,7 @@ module fifo_top;
    // `include "uvm_pkg.sv"
     import uvm_pkg::*;
     import test_pkg::*;
-    `include "uvm_macros.svh"
+   // `include "uvm_macros.svh"
 
     
 
